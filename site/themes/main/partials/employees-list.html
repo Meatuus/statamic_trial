@@ -1,0 +1,22 @@
+<div class="employees">
+    <h2 class="employees__heading">Our Team</h2>
+    <ul class="employees__list">
+        {{ collection:employee }}
+        {{ if total_results > 0 }}
+        <li class="employees__employee">
+            <a class="employees__link" href="{{ url }}">
+                <div class="employees__image-wrap">
+                    {{ assets:employee_headshot }}
+                    <img class="employee__image" src="{{ glide:id width="600" height="400" }}" alt="{{ title }}">
+                    {{ /assets:employee_headshot }}
+                </div>
+                <p class="employees__name">{{ title }}</p>
+                <p class="employees__position">{{ position }}</p>
+            </li>
+        </a>
+        {{ else }}
+        <li class="employees__item">We need to add our team members.</li>
+        {{ /if }}
+        {{ /collection:employee }}
+    </ul>
+</div>

@@ -1,0 +1,54 @@
+.social-profile-links
+{
+    text-align: center;
+
+    &__link {
+
+        display: inline-block;
+        margin: 0 18px 5px;
+        padding: 2px 0 0 0;
+        width: 30px;
+        height: 30px;
+
+        color: inherit;
+        font-family: "Icomoon";
+        font-style: normal;
+        font-size: 36px;
+        font-weight: normal;
+        font-variant: normal;
+        line-height: 1;
+        speak: none;
+        text-transform: none;
+        text-decoration: none;
+        text-align: center;
+        @include antialias;
+        transition: transform .1s ease-out;
+        transform: translateZ(0);
+
+        &:hover {
+
+            color: inherit;
+            transform: scale(1.1);
+            @include antialias;
+            text-decoration: none;
+        }
+    }
+
+    &__link--eieihome:before { content: "\e600"; }
+    &__link--facebook:before { content: "\e601"; }
+    &__link--flickr:before { content: "\e602"; }
+    &__link--googleplus:before { content: "\e610"; }
+    &__link--homestars:before { content: "\e604"; }
+    &__link--houzz:before { content: "\e605"; }
+    &__link--linkedin:before { content: "\e606"; }
+    &__link--pinterest:before { content: "\e607"; }
+    &__link--twitter:before { content: "\e608"; }
+    &__link--youtube:before { content: "\e609"; }
+    &__link--instagram:before { content: "\e611"; }
+
+    &__text {
+
+        display: inline-block;
+        text-indent: -5000em;
+    }
+}

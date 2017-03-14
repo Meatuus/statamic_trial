@@ -1,0 +1,22 @@
+<div class="products-listing">
+    <ul class="products-listing__list list-unstyled">
+        {{ collection:products }}
+        {{ if total_results > 0 }}
+        {{ if slug!=last_segment }}
+        <li class="products-listing__item" itemscope itemtype="http://schema.org/Product">
+            <a href="/products/{{ slug }}" class="products-listing__link">
+                {{ assets:product_feature_image }}
+                <div class="products-listing__image-wrap">
+                    <img class="products-listing__image" src="{{ glide:id width="600" height="300" }}" alt="{{ alt }}" itemprop="description">
+                </div>
+                {{ /assets:product_feature_image }}
+                <h3 class="products-listing__title" itemprop="name">{{ title }}</h3>
+            </a>
+        </li>
+        {{ /if }}
+        {{ else }}
+        <li class="products-listing__item">We haven’t posted any products yet.</li>
+        {{ /if }}
+        {{ /collection:products }}
+    </ul>
+</div>

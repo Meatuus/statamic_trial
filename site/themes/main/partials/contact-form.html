@@ -1,0 +1,74 @@
+
+<section class="contact-form contact-form--{{ segment_1 }} contact-form--{{ columns }}">
+
+    {{ if heading }}
+    <h2 class="contact-form__heading">{{ heading }}</h2>
+    {{ else }}
+    <h2 class="contact-form__heading">Send us a message</h2>
+    {{ /if }}
+
+    {{ form:set is="contact" attr="class:contact-form__form"}}
+
+    {{ if {form:errors} }}
+    <div class="contact-form__errors">
+        <strong class="contact-form__error_heading">We were unable to send your message!</strong>
+        <p class="contact-form__error_copy">Both your name and a valid email address are required.</p>
+    </div>
+    <script>
+        document.querySelector('.contact-form__wrapper').scrollIntoView();
+        $('.contact-form__errors').delay(500).fadeTo('fast', 0.1).delay(200).fadeTo('fast', 1).delay(200).fadeTo('fast', 0.1).fadeTo('slow', 1);
+    </script>
+    {{ /if }}
+
+    {{ form:create redirect="contact/thank-you" attr="class:contact-form__form"}}
+
+    <ul class="contact-form__field-list">
+
+        <li class="contact-form__form-group contact-form__form-group--name form-group">
+            <label class="contact-form__label form__label--visible" for="name">Name</label>
+            <input class="contact-form__field form-control" type="text" name="name" id="name" placeholder="Name (required)" value="{{ old:name }}" required />
+        </li>
+
+        <li class="contact-form__form-group contact-form__form-group--email form-group">
+            <label class="contact-form__label" for="email">Email</label>
+            <input class="contact-form__field form-control" type="text" name="email" id="email" placeholder="Email (required)" value="{{ old:email }}" required />
+        </li>
+
+        <li class="contact-form__form-group contact-form__form-group--phone form-group">
+            <label class="contact-form__label" for="phone">Phone</label>
+            <input class="contact-form__field form-control" type="text" name="phone" id="phone" placeholder="Phone" value="{{ old:phone }}" />
+        </li>
+
+        <li class="contact-form__form-group contact-form__form-group--phone form-group">
+            <label class="contact-form__label" for="location">Location</label>
+            <input class="contact-form__field form-control" type="text" name="location" id="location" placeholder="Location" value="{{ old:location }}" />
+        </li>
+
+        {{ if columns=="two-columns"}}
+    </ul>
+    <ul class="contact-form__field-list">
+        {{ /if }}
+
+        <li class="contact-form__form-group contact-form__form-group--message form-group">
+            <label class="contact-form__label contact-form__label--textarea" for="message">Message</label>
+            <textarea class="contact-form__field form-control contact-form__field--textarea" name="message" id="message" placeholder="Message" >{{ old:message }}</textarea>
+        </li>
+
+        <li class="contact-form__form-group form-group">
+            <input type="text" name="comment" tabindex="-1" class="contact-form__field contact-form__field--comment" />
+            <button class="contact-form__submit btn btn-primary" type="submit">Send</button>
+        </li>
+
+    </ul>
+
+    {{ if success }}
+    <div class="contact-form__success">
+        Form was submitted successfully.
+    </div>
+    {{ /if }}
+
+    {{ /form:create }}
+
+    {{ /form:set }}
+
+</section>

@@ -1,0 +1,50 @@
+<div class="project-detail-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="project-detail-page__title">{{ title }}</h1>
+            </div>
+            <div class="col-xs-12">
+
+                {{ if project_banner_image }}
+                {{ assets:project_banner_image }}
+                <div class="project-detail-page__banner-image-wrap">
+                    <img class="project-detail-page__banner-image" src="{{ glide:id width="1200" height="400" fit="crop_focal" }}" alt="{{ alt }}">
+                </div>
+                {{ /assets:project_banner_image }}
+                {{ /if }}
+
+                <article class="project-detail-page__content">
+                    {{ project_content | markdown }}
+                </article>
+
+                <div class="project-detail-page__gallery">
+                {{ assets:project_gallery }}
+                    {{ if first }}
+                    <div class="gallery popup-gallery">
+                        <h2 class="gallery__title">Project Images</h2>
+                        <ul class="gallery__list">
+                            {{ /if }}
+                            <li class="gallery__item">
+                                <a href="{{ glide:id height="1200" }}" class="gallery__link">
+                                    <div class="gallery__image-wrap">
+                                        <img src="{{ glide:id width="600" height="300" }}" alt="{{ alt or title }}" class="gallery__image" itemprop="photo">
+                                    </div>
+                                </a>
+                            </li>
+                            {{ if last }}
+                        </ul>
+                    </div>
+                    {{ /if }}
+                    {{ /assets:project_gallery }}
+                </div>
+
+                <aside class="projects-listing">
+                    <h2 class="projects-listing__heading">Other Projects</h2>
+                    {{ partial:projects-list }}
+                </aside>
+
+            </div>
+        </div>
+    </div>
+</div>

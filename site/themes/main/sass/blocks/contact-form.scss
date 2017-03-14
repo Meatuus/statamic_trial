@@ -1,0 +1,134 @@
+.contact-form {
+
+    margin-bottom: 0;
+    padding: $spacer;
+
+    background-color: #fff;
+    border: 1px solid #eee;
+    color: $gray;
+
+    &__form {
+
+        width: 100%;
+    }
+
+    &--two-columns &__form {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &--two-columns &__field-list {
+
+        @include media-breakpoint-up(lg) {
+
+            width: calc(50% - #{$grid-gutter-width-base});
+        }
+    }
+
+    &__heading {
+
+        width: 100%;
+    }
+
+    &__field-list {
+
+        @extend %list-clean;
+
+        width: 100%;
+    }
+
+    &__form-group {
+        position: relative;
+
+        padding-top: 20px;
+    }
+
+    &__label {
+
+        left: 0;
+        position: absolute;
+        top: 10px;
+
+        color: $gray;
+        opacity: 0;
+        font-size: .8rem;
+        transition: top 0.3s ease, opacity 0.3s ease;
+        text-transform: uppercase;
+    }
+
+    &__label--visible {
+        opacity: 1;
+        top: 3px;
+
+        padding-right: 4px;
+
+        background-color: #fff;
+    }
+
+    &__field, &__select {
+        padding-left: 0;
+    }
+
+    &__field {
+        border-bottom: 1px solid  $gray;
+
+        &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+            -webkit-text-fill-color: #fff !important;
+        }
+
+        &:autofill {
+            -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+            -webkit-text-fill-color: #fff !important;
+        }
+
+        &::placeholder {
+            color: inherit;
+        }
+
+        &:focus {
+            border-bottom: 1px solid $gray;
+        }
+    }
+
+    &__field--textarea {
+        height: 210px;
+        padding: $spacer;
+
+        border: 1px solid  $gray;
+    }
+
+    &__submit {
+        display: inline-block;
+        width: 100%;
+
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    &__field--comment { // This is the honeypot
+        position: absolute;
+        left: -1000000px;
+
+        opacity: 0.001;
+        height: 1px;
+        width: 1px;
+        padding: 0 !important;
+        margin: 0;
+    }
+
+    &__errors {
+
+        margin-bottom: 5px;
+        padding: 10px;
+
+        background-color: $brand-warning;
+        color: #fff;
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

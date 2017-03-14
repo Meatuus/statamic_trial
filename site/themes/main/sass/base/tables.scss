@@ -1,0 +1,12 @@
+table {
+    th {
+        padding: $spacer / 2;
+
+        border-bottom: 1px solid $brand-info;
+    }
+    td {
+        padding: $spacer / 2;
+
+        border-bottom: 1px solid $brand-info;
+    }
+}

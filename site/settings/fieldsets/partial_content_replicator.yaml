@@ -1,0 +1,48 @@
+title: 'Partial: Content Replicator'
+hide: true
+fields:
+  main_content:
+    type: section
+    display: Main Content
+  content_blocks:
+    type: replicator
+    display: Content Blocks
+    sets:
+      large_image:
+        display: Large Image
+        instructions: ""
+        fields:
+          large_image:
+            type: assets
+            display: Large Image
+            instructions: null
+            container: main
+            folder: img
+            max_files: 1
+      body:
+        display: Body
+        instructions: ""
+        fields:
+          body:
+            type: markdown
+            display: Body
+            instructions: null
+            cheatsheet: true
+            container: main
+            folder: img
+            default: ""
+      gallery:
+        display: Gallery
+        instructions: ""
+        fields:
+          gallery_title:
+            type: text
+            display: Gallery Title
+            instructions: null
+          gallery_images:
+            type: assets
+            display: Images
+            instructions: null
+            container: main
+            folder: img
+            max_files: null

@@ -1,0 +1,20 @@
+/*
+|--------------------------------------------------------------------------
+| Clearfix
+|
+| Use this to clear containers. Need for containers of the block-grid elements
+|--------------------------------------------------------------------------
+*/
+
+@mixin clearfix {
+
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}

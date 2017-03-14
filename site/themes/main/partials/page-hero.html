@@ -1,0 +1,17 @@
+<header class="page-hero page-hero--{{ slug or "homepage" }}" {{ assets:page_hero_banner }}style="background-image: url({{ glide:id width="1600" }})"{{ /assets:page_hero_banner }}>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-hero__heading">{{ page_hero_message or title | widont }}</h1>
+                {{ if page_hero_intro }}
+                <div class="page-hero__intro">
+                    {{ page_hero_intro | markdown }}
+                </div>
+                {{ /if }}
+                {{ if page_hero_link }}
+                <a href="{{ relate:page_hero_link }}{{ url }}{{ /relate:page_hero_link }}" class="btn btn-success page_hero__button">{{ page_hero_call_to_action }}</a>
+                {{ /if }}
+            </div>
+        </div>
+    </div>
+</header>

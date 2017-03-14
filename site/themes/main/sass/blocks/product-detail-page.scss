@@ -1,0 +1,24 @@
+.product-detail-page {
+
+    &__name {
+
+
+    }
+
+    &__description {
+
+
+    }
+
+    &__featured-image-wrap {
+
+        @include aspect-ratio(1200,400);
+
+        margin-bottom: calc(#{$spacer} + 4vh);
+    }
+
+    &__featured-image {
+
+
+    }
+}

@@ -1,0 +1,39 @@
+.employees {
+
+    &__list {
+
+        @include list-unstyled;
+        @include make-row();
+
+        @include media-breakpoint-up(md){
+        }
+    }
+
+    &__employee {
+
+        @include make-col-ready();
+        @include make-col(3);
+
+        @include media-breakpoint-up(md){
+
+            @include make-col(4);
+        }
+
+        @include media-breakpoint-up(lg){
+
+            @include make-col(3);
+        }
+    }
+
+    &__image {
+
+    }
+
+    &__name {
+
+    }
+
+    &__position {
+
+    }
+}

@@ -1,0 +1,52 @@
+<div class="contact-page-main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>{{ title }}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-lg-8">
+
+                {{ partial:default-content }}
+
+                <dl class="contact-info contact-info--contact-page" itemprop="address" itemscope itemtype="http://schema.org/LocalBusiness">
+                    <dt class="contact-info__title contact-info__title--phone">Phone</dt>
+                    <dd class="contact-info__data contact-info__data--phone"><span itemprop="telephone">{{ primary_phone }}</span></dd>
+                    <dt class="contact-info__title contact-info__title--email">Email</dt>
+                    <dd class="contact-info__data contact-info__data--email"><a itemprop="email" href="mailto:{{ primary_email | obfuscate_email }}">{{ primary_email | obfuscate_email }}</a></dd>
+                </dl>
+
+            </div>
+
+            <div class="col-xs-12">{{ partial:contact-form columns="two-columns" heading="Send us a message" }}</div>
+        </div>
+    </div>
+</div>
+
+<div class="map">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div id="map" style="height: 500px; background: #ccc"></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="map__address">
+                    <h2 class="map__address-title">Located in {{ serving_area }}</h2>
+                    <address  itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span itemprop="streetAddress">{{ primary_address }}</span> <br>
+                        <span itemprop="postalLocality">{{ primary_city }}</span>, <span  itemprop="postalRegion">{{ primary_province }}</span> <br>
+                        <span itemprop="postalCode">{{ primary_postal_code | widont }}</span>
+                    </address>
+                    <a class="btn btn-secondary map__address-button" href="https://www.google.ca/maps/place/57+John+St+W,+Waterdown,+ON+L0R+2H6/@43.3353437,-79.9002975,17z/data=!3m1!4b1!4m5!3m4!1s0x882c9d5d404d233f:0xcf359674efc00f02!8m2!3d43.3353437!4d-79.8981088">Get Directions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+    </script>

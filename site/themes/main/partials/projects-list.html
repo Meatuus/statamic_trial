@@ -1,0 +1,22 @@
+<div class="projects-listing">
+    <ul class="projects-listing__list">
+        {{ collection:projects }}
+        {{ if total_results > 0 }}
+        {{ if slug!=last_segment }}
+        <li class="projects-listing__item" itemscope itemtype="http://schema.org/Product">
+            <a href="/projects/{{ slug }}" class="projects-listing__link">
+                <h3 class="projects-listing__title" itemprop="name">{{ title }}</h3>
+                {{ assets:project_banner_image }}
+                <div class="projects-listing__image-wrap">
+                    <img class="projects-listing__image" src="{{ glide:id width="600" height="300" fit="crop_focal" }}" alt="{{ alt }}" itemprop="description">
+                </div>
+                {{ /assets:project_banner_image }}
+            </a>
+        </li>
+        {{ /if }}
+        {{ else }}
+        <li class="projects-listing__item">We haven’t posted any projects yet.</li>
+        {{ /if }}
+        {{ /collection:projects }}
+    </ul>
+</div>

@@ -1,0 +1,30 @@
+.careers-callout {
+
+    padding: $spacer*2 0;
+    width: 100%;
+
+    background-color: $gray-light;
+    color: #fff;
+    text-align: center;
+
+    &__link {
+
+        text-decoration: none;
+
+        &:hover, &:focus {
+
+            outline: 0;
+            text-decoration: none;
+        }
+    }
+
+    &__heading {
+
+
+    }
+
+    &__button {
+
+
+    }
+}

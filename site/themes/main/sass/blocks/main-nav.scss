@@ -1,0 +1,143 @@
+/*
+|--------------------------------------------------------------------------
+| Main Nav
+|
+| Using the label and input as for the mobile version.
+|--------------------------------------------------------------------------
+*/
+
+.main-nav {
+
+    background-color: $gray-lighter;
+    color: $gray-dark;
+    text-align: left;
+
+    @include media-breakpoint-down(xs){
+        left: 0;
+        position: fixed;
+        top: 0;
+        z-index: 3000;
+
+        height: 40px;
+        width: 40px;
+    }
+
+    @include media-breakpoint-up(sm) {
+        order: 3;
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+    @include media-breakpoint-up(lg) {
+        align-self: flex-end;
+        order: 1;
+
+        padding: $spacer 0 $spacer $spacer;
+        width: auto;
+
+        background-color: transparent;
+    }
+
+    @include media-breakpoint-up(xl){
+
+        padding-left: $spacer*3;
+    }
+
+    &__list {
+
+        @include list-unstyled;
+        margin: 0;
+
+        background-color: $gray-lighter;
+
+        @include media-breakpoint-down(xs) {
+            position: absolute;
+            top: 40px;
+            z-index: 1000;
+            width: 100vw;
+
+            transition: transform .25s ease-out;
+            transform: scaleY(0);
+            transform-origin: 75% top;
+        }
+
+        @include media-breakpoint-up(sm) {
+            width: 100%;
+        }
+
+        @include media-breakpoint-up(lg){
+            background-color: transparent;
+        }
+    }
+
+    &__item {
+        display: block;
+
+        @include media-breakpoint-up(sm) {
+            display: inline-block;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        width: 100%;
+        padding: 10px;
+
+        text-decoration: none;
+
+        @include media-breakpoint-up(sm) {
+            width: auto;
+        }
+
+        &:hover, &:focus {
+
+            outline: 0;
+            background-color: darken($gray-lighter, 10);
+            text-decoration: none;
+        }
+    }
+
+    &__item--active &__link {
+
+        background-color: darken($gray-lighter, 10);
+    }
+
+    &__trigger {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        appearance: none;
+        opacity: 1;
+        outline: 0 !important;
+        text-align: center;
+
+        @include media-breakpoint-up(sm){
+            display: none;
+        }
+
+        &:after {
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            content:'\2630';
+            font-size: 1.8em;
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        &:checked:after {
+            content: 'X';
+        }
+    }
+
+    &__trigger:checked ~ &__list {
+        display: block;
+        transform: scaleY(1);
+    }
+}

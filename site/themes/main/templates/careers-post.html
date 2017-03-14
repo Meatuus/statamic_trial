@@ -1,0 +1,77 @@
+<div class="careers-post" itemscope itemtype="http://schema.org/JobPosting">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="careers-post__title" itemprop="title">{{ title }}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-lg-9">
+                {{ if careers_post_description }}
+                <div itemprop="description">
+                    <h2>Description</h2>
+                    {{ careers_post_description | markdown }}
+                </div>
+                {{ /if }}
+                {{ if careers_post_responsibilities }}
+                <div itemprop="responsibilities">
+                    <h2>Responsibilities</h2>
+                    {{ careers_post_responsibilities | markdown }}
+                </div>
+                {{ /if }}
+                {{ if careers_post_educational_requirements }}
+                <div itemprop="educationalRequirements">
+                    <h2>Educational Requirements</h2>
+                    {{ careers_post_educational_requirements | markdown }}
+                </div>
+                {{ /if }}
+                {{ if careers_post_experience_requirements }}
+                <div itemprop="experienceRequirements">
+                    <h2>Experience Requirements</h2>
+                    {{ careers_post_experience_requirements | markdown }}
+                </div>
+                {{ /if }}
+                {{ if careers_post_desired_skills }}
+                <div itemprop="skills">
+                    <h2>Desired Skills</h2>
+                    {{ careers_post_desired_skills | markdown }}
+                </div>
+                {{ /if }}
+                {{ if careers_post_qualifications }}
+                <div itemprop="qualifications">
+                    <h2>Qualifications</h2>
+                    {{ careers_post_qualifications | markdown }}
+                </div>
+                {{ /if }}
+                {{ if careers_post_benefits }}
+                <div itemprop="incentiveCompensation">
+                    <h2>Benefits</h2>
+                    {{ careers_post_benefits | markdown }}
+                </div>
+                {{ /if }}
+                {{ if careers_post_how_to_apply }}
+                <div class="careers-post__how-to-apply">
+                    <h2>How to Apply</h2>
+                    {{ careers_post_how_to_apply | markdown }}
+                </div>
+                {{ /if }}
+
+            </div>
+            <div class="col-lg-3">
+                <div class="careers-listing">
+                    <h2 class="careers-listing__heading">More Openings</h2>
+                    <ul class="careers-listing__list">
+                        {{ collection:careers }}
+                        {{ if total_results > 0 }}
+                        <li class="careers-listing__item"><a href="/careers/{{ slug }}" class="careers-listing__link">{{ title }}</a></li>
+                        {{ else }}
+                        <li class="careers-listing__item">We’re busy, but not looking to hire at the moment. Sorry!</li>
+                        {{ /if }}
+                        {{ /collection:careers }}
+                    </ul>
+                    <a href="/careers" class="btn btn-primary careers-listing__button">Complete Listing</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

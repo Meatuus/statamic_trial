@@ -1,0 +1,8 @@
+driver: smtp
+from_email: info@compasscreative.ca
+from_name: Compass Creative
+host: smtp.postmarkapp.com
+port: "587"
+encryption: tls
+username: 8f4b9d87-77e3-4a71-a563-2957f87be1ad
+password: 8f4b9d87-77e3-4a71-a563-2957f87be1ad

@@ -1,0 +1,41 @@
+<article class="article">
+
+    {{ content_blocks }}
+
+    {{ if type=="large_image" }}
+    {{ assets:large_image }}
+    <div class="article__large-image-wrap">
+        <img class="article__large-image" src="{{ glide:id width="800" }}" alt="{{ alt }}">
+    </div>
+    {{ /assets:large_image }}
+    {{ /if }}
+
+    {{ if type=="body" }}
+    <div class="article__body wysiwyg">
+        {{ body | markdown }}
+    </div>
+    {{ /if }}
+
+    {{ if type=="gallery" }}
+    <div class="gallery popup-gallery">
+
+        {{ if gallery_title }}
+        <h2 class="gallery__title">{{ gallery_title }}</h2>
+        {{ /if }}
+
+        <ul class="gallery__list">
+            {{ assets:gallery_images }}
+
+            <li class="gallery__item">
+                <a class="gallery__link" data-imagelightbox="thumb" href="{{ glide:id height="1000" }}">
+                    <img class="gallery__image" src="{{ glide:id width="500" height="500" }}" alt="{{ alt }}">
+                </a>
+            </li>
+            {{ /assets:gallery_images }}
+        </ul>
+    </div>
+    {{ /if }}
+
+    {{ /content_blocks }}
+
+</article>

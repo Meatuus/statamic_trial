@@ -1,0 +1,66 @@
+<div class="careers-listing-page">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>{{ title }}</h1>
+            </div>
+            <div class="col">
+                <article class="article">
+
+                    {{ content_blocks }}
+
+                    {{ if type=="large_image" }}
+
+                    {{ assets:large_image }}
+                    <div class="article__large_image">
+                        <img src="{{ glide:id width="800" }}" alt="{{ alt }}">
+                    </div>
+                    {{ /assets:large_image }}
+
+                    {{ /if }}
+
+                    {{ if type=="body" }}
+                    <div class="article__body wysiwyg">
+                        {{ body | markdown }}
+                    </div>
+                    {{ /if }}
+
+                    {{ if type=="gallery" }}
+                    <div class="article__gallery">
+
+                        {{ if gallery_title }}
+                        <h2 class="article__gallery_title">{{ gallery_title }}</h2>
+                        {{ /if }}
+
+                        <ul class="article__gallery_list">
+                            {{ assets:gallery_images }}
+
+                            <li class="article__gallery_item">
+                                <a class="article__gallery_link" data-imagelightbox="thumb" href="{{ glide:id height="1000" }}">
+                                    <img class="article__gallery_image" src="{{ glide:id width="500" height="500" }}" alt="{{ alt }}">
+                                </a>
+                            </li>
+                            {{ /assets:gallery_images }}
+                        </ul>
+                    </div>
+
+                    {{ /if }}
+
+                    {{ /content_blocks }}
+
+                    <div class="careers-listing">
+                        <ul class="careers-listing__list">
+                            {{ collection:careers }}
+                            {{ if total_results > 0 }}
+                            <li class="careers-listing__item"><a href="/careers/{{ slug }}" class="careers-listing__link">{{ title }}</a></li>
+                            {{ else }}
+                            <li class="careers-listing__item">We’re busy, but not looking to hire at the moment. Sorry!</li>
+                            {{ /if }}
+                            {{ /collection:careers }}
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>

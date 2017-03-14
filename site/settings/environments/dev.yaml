@@ -1,0 +1,10 @@
+settings:
+  debug:
+    debug: true
+    debug_bar: true
+  system:
+    locales:
+      en:
+        full: en_US
+        name: English
+        url: http://local.statamic-boilerplate.com

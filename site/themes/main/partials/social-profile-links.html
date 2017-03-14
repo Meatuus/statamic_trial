@@ -1,0 +1,10 @@
+<div class="social-profile-links" itemscope itemtype="http://schema.org/LocalBusiness">
+    <h2 class="social-profile-links__title">Follow us</h2>
+    {{ social_profiles }}
+    <span class="social-profile-links__item social-profile-links__item--{{ social_profile_name | lowercase | slugify }}" itemprop="sameAs">
+        <a href="{{ social_profile_link }}" class="social-profile-links__link social-profile-links__link--{{ social_profile_name | lowercase | slugify }}" target="_blank">
+            <span class="social-profile-links__text">{{ social_profile_name }}</span>
+        </a>
+    </span>
+    {{ /social_profiles }}
+</div>

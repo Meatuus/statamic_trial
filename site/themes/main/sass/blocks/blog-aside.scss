@@ -1,0 +1,19 @@
+.blog-aside {
+
+    margin-bottom: calc(#{$spacer} + 2vh);
+
+    &__heading {
+
+        margin-bottom: $spacer;
+    }
+
+    &__content {
+
+        margin-bottom: $spacer*2;
+    }
+
+    &__button {
+
+
+    }
+}

@@ -1,0 +1,45 @@
+.projects-listing {
+
+    margin-bottom: calc(#{$spacer} + 4vh);
+
+    &__list {
+
+        @include list-unstyled;
+        @include make-row();
+
+        @include media-breakpoint-up(md){
+
+        }
+    }
+
+    &__item {
+
+        @include make-col-ready();
+        @include make-col(6);
+
+        @include media-breakpoint-up(md){
+
+            @include make-col(4);
+        }
+    }
+
+    &__link {
+
+        text-decoration: none;
+    }
+
+    &__title {
+
+    }
+
+    &__image-wrap {
+
+        @include aspect-ratio(6,3);
+
+        background-color: $gray-lighter;
+    }
+
+    &__image {
+
+    }
+}

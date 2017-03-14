@@ -1,0 +1,51 @@
+<div class="product-detail-page" itemscope itemtype="http://schema.org/Product">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="product-detail-page__name" itemprop="name">{{ title }}</h1>
+
+                {{ if product_feature_image }}
+                {{ assets:product_feature_image }}
+                <div class="product-detail-page__featured-image-wrap">
+                    <img class="product-detail-page__featured-image" src="{{ glide:id width="1200" height="400" }}" alt="{{ alt }}">
+                </div>
+                {{ /assets:product_feature_image }}
+                {{ /if }}
+
+                <div class="product-detail-page__description" itemprop="description">
+                    {{ product_description | markdown }}
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                    {{ assets:product_gallery }}
+                    {{ if first }}
+                    <div class="gallery popup-gallery">
+                        <h2 class="gallery__title">Gallery</h2>
+                        <ul class="gallery__list">
+                    {{ /if }}
+                            <li class="gallery__item">
+                                <a href="{{ glide:id height="1200" }}" class="gallery__link">
+                                    <div class="gallery__image-wrap">
+                                        <img src="{{ glide:id width="600" height="300" }}" alt="{{ alt or title }}" class="gallery__image" itemprop="photo">
+                                    </div>
+                                </a>
+                            </li>
+                    {{ if last }}
+                        </ul>
+                    </div>
+                    {{ /if }}
+                    {{ /assets:product_gallery }}
+
+                    <aside class="other-products">
+                        <h2 class="other-product__heading">Other products</h2>
+                        {{ partial:products-list }}
+                    </aside>
+
+                </article>
+            </div>
+        </div>
+    </div>
+</div>

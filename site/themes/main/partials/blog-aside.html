@@ -1,0 +1,14 @@
+<div class="blog-aside">
+    <h2 class="blog-aside__heading">Recent Articles</h2>
+    <div class="blog-aside__content">
+        {{ collection:blog_post }}
+        <h3 class="blog-post-list__title">
+            <a class="blog-post-list__link" href="/blog/{{ date format="Y/m/d"}}/{{ slug }}">
+                {{ title }}
+                <span class="blog-post-list__date">{{ date format="M j, Y" }}</span>
+            </a>
+        </h3>
+        {{ /collection:blog_post }}
+    </div>
+    <a href="/blog/archive" class="btn btn-small btn-secondary blog-aside__button">All Posts</a>
+</div>

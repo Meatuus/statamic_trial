@@ -1,0 +1,26 @@
+.project-detail-page {
+
+    padding-top: calc(#{$spacer} + 4vh);
+
+    &__title {
+
+    }
+
+    &__banner-image-wrap {
+
+        @include aspect-ratio(12,4);
+
+        margin-bottom: calc(#{$spacer} + 2vh);
+
+        background-color: $gray-lighter;
+    }
+
+    &__banner-image {
+
+    }
+
+    &__content {
+
+        margin-bottom: calc(#{$spacer} + 2vh);
+    }
+}

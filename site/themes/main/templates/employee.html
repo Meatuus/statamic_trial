@@ -1,0 +1,23 @@
+{{ partial:page_hero }}
+
+<div class="employee">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="employee__image-wrap">
+                    {{ assets:employee_headshot }}
+                    <img class="employee__image" src="{{ glide:id width="600" height="400" }}" alt="{{ title }}">
+                    {{ /assets:employee_headshot }}
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h1 class="employee__name">{{ title }}</h1>
+                <p class="employee__position">{{ position }}</p>
+                <div class="employee_bio">
+                    {{ employee_bio | markdown }}
+                </div>
+                <a href="/about#team" class="btn btn-primary employee__button-return">View Team</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Responsivie Debugging
+   ========================================================================== */
+
+  body.development:after {
+    bottom: 2px;
+    position: fixed;
+    right: 2px;
+    z-index: 3000;
+
+    padding: 2px 8px;
+
+    background: lighten($brand-primary, 5%);
+    color: #FFF;
+    font-size: 12px;
+    font-weight: bold;
+    opacity: .5;
+    text-align: center;
+
+    @include media-breakpoint-up(xs) {
+      content: "size: xs";
+    }
+    @include media-breakpoint-up(sm) {
+      content: "size: sm";
+    }
+    @include media-breakpoint-up(md) {
+      content: "size: md";
+    }
+    @include media-breakpoint-up(lg) {
+      content: "size: lg";
+    }
+    @include media-breakpoint-up(xl) {
+      content: "size: xl";
+    }
+  }
+
+
+
+

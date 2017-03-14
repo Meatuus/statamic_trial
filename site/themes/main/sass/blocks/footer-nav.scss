@@ -1,0 +1,25 @@
+.footer-nav {
+
+    margin-bottom: $spacer;
+    padding: $spacer 0;
+    width: 100%;
+
+    background-color: $gray-lighter;
+    text-align: center;
+
+    &__list {
+
+        @extend %list-clean;
+        text-align: center;
+    }
+
+    &__item {
+
+        display: inline-block;
+    }
+
+    &__link {
+
+
+    }
+}

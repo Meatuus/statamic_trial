@@ -1,0 +1,4 @@
+title: Blog Posts
+order: date
+fieldset: blog_post
+template: blog-post

@@ -1,0 +1,49 @@
+title: 'Collection: Job Posts'
+create_title: Job Post
+hide: true
+fields:
+  title:
+    type: title
+    display: Title
+  careers_post_location:
+    type: text
+    display: Location
+  careers_post_description:
+    type: markdown
+    display: Description
+    cheatsheet: true
+    container: main
+    folder: img
+  careers_post_responsibilities:
+    type: markdown
+    display: Responsibilities
+    cheatsheet: false
+  careers_post_educational_requirements:
+    type: markdown
+    display: Educational Requirements
+    cheatsheet: false
+  careers_post_experience_requirements:
+    type: markdown
+    display: Experience Requirements
+    cheatsheet: false
+  careers_post_desired_skills:
+    type: markdown
+    display: Desired Skills
+    cheatsheet: false
+  careers_post_qualifications:
+    type: markdown
+    display: Qualifications
+    cheatsheet: false
+  careers_post_benefits:
+    type: markdown
+    display: Benefits
+    cheatsheet: false
+  careers_post_how_to_apply:
+    type: markdown
+    display: How to apply
+    cheatsheet: false
+    default: 'If interested in this position, please email us your resume, along with salary requirements and a cover letter to {{ primary_email address }}.'
+  partial_search_and_social:
+    type: partial
+    display: 'Search & Social'
+    fieldset: partial_search_and_social

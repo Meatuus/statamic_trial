@@ -1,0 +1,88 @@
+/*
+|--------------------------------------------------------------------------
+| Main
+|
+| This is the main scss file that pulls in all the other files.
+|--------------------------------------------------------------------------
+*/
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Vendor files
+|
+| Try and use NPM to manage all vendor files if possible.
+|--------------------------------------------------------------------------
+*/
+
+// Core variables and mixins
+@import "bootstrap-custom";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Reset and dependencies
+@import "../node_modules/bootstrap/scss/normalize";
+@import "../node_modules/bootstrap/scss/print";
+
+// Core CSS
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/code";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/tables";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/buttons";
+
+// Utility classes
+@import "../node_modules/bootstrap/scss/utilities";
+
+// Magnific Popup
+@import "../node_modules/magnific-popup/src/css/main";
+
+
+/*
+|--------------------------------------------------------------------------
+| Mixins
+|
+|
+|--------------------------------------------------------------------------
+*/
+
+@import "mixins/*";
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Extends
+|
+| Objects that can be extended for use inside of blocks
+|--------------------------------------------------------------------------
+*/
+
+@import "extends/*";
+
+
+/*
+|--------------------------------------------------------------------------
+| Base
+|
+| Basic building blocks, these are similar to blocks, but used more
+| globally.
+|--------------------------------------------------------------------------
+*/
+
+@import "base/*";
+
+
+/*
+|--------------------------------------------------------------------------
+| Blocks
+|
+| Each block should be saved in it’s own file.
+|--------------------------------------------------------------------------
+*/
+
+@import "blocks/*";

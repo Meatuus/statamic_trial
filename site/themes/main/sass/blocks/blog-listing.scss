@@ -1,0 +1,8 @@
+.blog-listing {
+
+    &__article {
+
+        margin-bottom: calc(#{$spacer}*2 + 3vh);
+    }
+
+}

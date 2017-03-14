@@ -1,0 +1,26 @@
+title: 'Collection: Featured Project'
+create_title: Featured Project
+hide: true
+fields:
+  title:
+    type: title
+    display: Title
+  project_banner_image:
+    type: assets
+    display: Banner Image
+    container: main
+    folder: img/projects
+    max_files: "1"
+  project_content:
+    type: markdown
+    display: Content
+    cheatsheet: false
+  project_gallery:
+    type: assets
+    display: Images
+    container: main
+    folder: img/projects
+  partial_search_and_social:
+    type: partial
+    display: 'Search & Social'
+    fieldset: partial_search_and_social

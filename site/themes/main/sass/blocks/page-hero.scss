@@ -1,0 +1,36 @@
+.page-hero {
+
+    position: relative;
+
+    margin-bottom: calc(#{$spacer} + 5vh);
+    padding: calc(#{$spacer} + 5vh) 0;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+
+    &:before {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        position: absolute;
+        z-index: 0;
+
+        content: '';
+        width: 100%;
+
+        background-color: rgba(#000, .4);
+    }
+
+    &__message {
+
+        max-width: 700px;
+    }
+
+    &__intro {
+
+        max-width: 700px;
+    }
+}

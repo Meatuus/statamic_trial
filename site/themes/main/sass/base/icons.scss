@@ -1,0 +1,32 @@
+/*
+|--------------------------------------------------------------------------
+| Icons
+|
+| Icons are generated using https://icomoon.io/app
+| If you want to add more icons, you can generate a new set of font files
+| from the icomoon app.
+|--------------------------------------------------------------------------
+*/
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?gkzt5b');
+  src:  url('../fonts/icomoon.eot?gkzt5b#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?gkzt5b') format('truetype'),
+    url('../fonts/icomoon.woff?gkzt5b') format('woff'),
+    url('../fonts/icomoon.svg?gkzt5b#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'contact_form';
+  src:url('../fonts/contact_form.eot?-6n3m7o');
+  src:url('../fonts/contact_form.eot?#iefix-6n3m7o') format('embedded-opentype'),
+    url('../fonts/contact_form.woff?-6n3m7o') format('woff'),
+    url('../fonts/contact_form.ttf?-6n3m7o') format('truetype'),
+    url('../fonts/contact_form.svg?-6n3m7o#contact_form') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

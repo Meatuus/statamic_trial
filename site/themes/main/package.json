@@ -1,0 +1,29 @@
+{
+  "_comment": "To install use npm update --save-dev. This will lock you into a version number.",
+  "private": true,
+  "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-css-globbing": "^0.1.8",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-include": "^2.3.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-modernizr": "0.0.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "",
+    "gulp-tinypng": "^1.0.2",
+    "gulp-uglify": "^2.0.0",
+    "headroom.js": "^0.9.3",
+    "imagemin-pngquant": "^5.0.0",
+    "jquery": "^3.1.1",
+    "magnific-popup": "^1.1.0",
+    "picturefill": "",
+    "sanitize.css": "",
+    "waypoints": "^4.0.1"
+  }
+}

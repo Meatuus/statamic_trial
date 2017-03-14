@@ -1,0 +1,62 @@
+{{ partial:page-hero }}
+
+<div itemscope itemtype="http://schema.org/LocalBusiness">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <article class="article">
+
+                    {{ content_blocks }}
+
+                    {{ if type=="large_image" }}
+
+                    {{ assets:large_image }}
+                    <div class="article__large_image">
+                        <img src="{{ glide:id width="1200" height="500" }}" alt="{{ alt }}">
+                    </div>
+                    {{ /assets:large_image }}
+
+                    {{ /if }}
+
+                    {{ if type=="body" }}
+                    <div class="article__body wysiwyg">
+                        {{ body | markdown }}
+                    </div>
+                    {{ /if }}
+
+                    {{ if type=="gallery" }}
+                    <div class="article__gallery">
+
+                        {{ if gallery_title }}
+                        <h2 class="article__gallery_title">{{ gallery_title }}</h2>
+                        {{ /if }}
+
+                        <ul class="article__gallery_list">
+                            {{ assets:gallery_images }}
+                            <li class="article__gallery_item" itemprop="employee">
+                                <a class="article__gallery_link" data-imagelightbox="thumb" href="{{ glide:id height="1000" }}">
+                                    <img class="article__gallery_image" src="{{ glide:id width="500" height="500" }}" alt="{{ alt }}">
+                                </a>
+                            </li>
+                            {{ /assets:gallery_images }}
+                        </ul>
+                    </div>
+
+                    {{ /if }}
+
+                    {{ /content_blocks }}
+                </article>
+            </div>
+        </div>
+
+        <div id="team" class="row">
+            <div class="col-xs-12">
+                {{ partial:employees-list}}
+            </div>
+        </div>
+
+        <div class="row">
+            {{ partial:careers-callout }}
+        </div>
+    </div>
+</div>

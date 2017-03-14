@@ -1,0 +1,4 @@
+title: Products
+order: number
+fieldset: product
+template: product

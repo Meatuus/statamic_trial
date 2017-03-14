@@ -1,0 +1,40 @@
+.gallery {
+
+    &__list {
+
+        @include list-unstyled;
+        @include make-row;
+    }
+
+    &__item {
+
+        @include make-col-ready;
+        @include make-col(6);
+
+        margin-bottom: $grid-gutter-width-base;
+
+        @include media-breakpoint-up(xl) {
+            @include make-col(3);
+        }
+    }
+
+    &__link {
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    &__image-wrap {
+
+        @include aspect-ratio(2,1);
+
+        background-color: $gray-lighter;
+    }
+
+    &__image {
+
+        height: auto;
+        max-width: 100%;
+    }
+}

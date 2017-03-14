@@ -1,0 +1,44 @@
+<header class="site-header" itemscope itemtype="http://schema.org/LocalBusiness">
+
+    <div class="container">
+        <div class="site-header__inner">
+
+            <a href="/" class="site-logo">
+                <div class="site-logo__image-wrap">
+                    <img itemprop="logo" src="{{ theme:img src="logo.png"}}" alt="{{ site_name }}" class="site-logo__image">
+                </div>
+                <span class="site-logo__tagline">Tagline Goes Here</span>
+            </a>
+
+            <div class="site-header__contact-info">
+                {{ if serving_area }}
+                <div class="site-header__location" itemprop="areaServed">
+                    Serving {{ serving_area }}
+                </div>
+                {{ /if }}
+
+                <div class="site-header__phone">
+                    <a href="site-header__phone-link" itemprop="telephone">
+                        <span class="site-header__phone-digits">{{ primary_phone }}</span>
+                    </a>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <div class="main-nav__inner">
+                    <input class="main-nav__trigger" id="bullet" type="checkbox">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item {{ if segment_1=="" }}main-nav__item--active{{ /if }}"><a href="/" class="main-nav__link">Home</a></li>
+                        <li class="main-nav__item {{ if  segment_1=="projects" }}main-nav__item--active{{ /if }}"><a href="/projects" class="main-nav__link">Projects</a></li>
+                        <li class="main-nav__item {{ if  segment_1=="products" }}main-nav__item--active{{ /if }}"><a href="/products" class="main-nav__link">Products</a></li>
+                        <li class="main-nav__item {{ if  segment_1=="blog" }}main-nav__item--active{{ /if }}"><a href="/blog" class="main-nav__link">Blog</a></li>
+                        <li class="main-nav__item {{ if  segment_1=="about" }}main-nav__item--active{{ /if }}"><a href="/about" class="main-nav__link">About</a></li>
+                        <li class="main-nav__item {{ if  segment_1=="contact" }}main-nav__item--active{{ /if }}"><a href="/contact" class="main-nav__link">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+
+</header>

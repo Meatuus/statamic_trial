@@ -1,0 +1,22 @@
+/*
+|--------------------------------------------------------------------------
+| Buttons
+|
+| Various button styles that can be used. Apply this class directly
+| in HTML. Then BEM syntax can override if needed.
+|
+| Example:
+|
+| <div class="block">
+|     <a class="block__button button" href=""></a>
+| </div>
+|
+|--------------------------------------------------------------------------
+*/
+
+.btn {
+    padding-top: $btn-padding-y-top;
+    padding-bottom: $btn-padding-y-bottom;
+
+    text-decoration: none;
+}

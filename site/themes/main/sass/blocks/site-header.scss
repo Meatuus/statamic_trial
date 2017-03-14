@@ -1,0 +1,98 @@
+.site-header {
+
+    position: relative;
+
+    padding: 30px 0 0;
+
+    text-align: center;
+
+    &__inner {
+
+        position: relative;
+
+        @include media-breakpoint-up(sm) {
+
+            display: flex;
+            flex-wrap: wrap;
+
+            width: 100%;
+        }
+    }
+
+    &__contact-info {
+
+        @include media-breakpoint-down(xs){
+            position: fixed;
+            top: 0;
+            z-index: 2000;
+
+            min-height: 40px;
+            padding-top: 10px;
+            width: 100%;
+
+            background-color: $gray-lighter;
+        }
+
+        @include media-breakpoint-up(sm) {
+            order: 2;
+            position: relative;
+
+            margin-left: auto;
+
+            max-width: 300px;
+            width: 40%;
+        }
+    }
+
+    &__location {
+
+        font-size: 13px;
+    }
+
+    &__phone {
+
+        @include media-breakpoint-down(xs) {
+
+            position: absolute;
+            right: $spacer;
+            top: 0;
+
+            height: 40px;
+            width: 40px;
+
+            background-color: lighten($gray-lighter, 3);
+            background-image: url(../img/phone-icon.png);
+            background-size: auto 60%;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+        }
+    }
+
+    &__phone-digits {
+
+        display: none;
+
+        @include media-breakpoint-up(sm) {
+            display: block;
+        }
+    }
+
+    &__phone-icon {
+
+        position: absolute;
+        top: 50%;
+
+        display: block;
+
+        width: 100%;
+
+        text-align: center;
+        transform: translateY(-50%);
+
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+
+    }
+}

@@ -1,0 +1,40 @@
+{{ partial:blog-header }}
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="blog-listing col-lg-8">
+            {{ collection:blog_post scope="post" }}
+
+            <article class="blog-listing__article" itemscope itemtype="http://schema.org/BlogPosting">
+                <h2 class="blog-post__title" itemprop="headline">
+                    <a class="blog-post__title-link" href="{{ url }}">{{ title }}</a>
+                </h2>
+                <span class="blog-post__date" itemprop="dateCreated">{{ date format="M j, Y" }}</span>
+
+                {{ assets:blog_post_feature_image }}
+                <div class="blog-post__feature-image-wrap">
+                <a class="blog-post__feature-image-link" href="{{ post:url }}">
+                        <img class="blog-post__feature-image" src="{{ glide:id width="800" }}" alt="{{ alt }}" itemprop="image">
+                    </a>
+                </div>
+                {{ /assets:blog_post_feature_image }}
+
+                <div class="blog-post__summary wysiwyg">
+                    {{ blog_post_summary | markdown}}
+                </div>
+                <a class="btn btn-secondary btn-sm blog-post__button" href="{{ url }}">Read Post</a>
+            </article>
+
+            {{ /collection:blog_post }}
+
+        </div>
+
+        <div class="col-lg-4">
+            {{ partial:blog-aside }}
+        </div>
+
+    </div>
+
+</div>

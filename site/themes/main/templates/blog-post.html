@@ -1,0 +1,87 @@
+<div itemscope itemtype="http://schema.org/BlogPosting">
+
+    {{ partial:blog-header }}
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-8">
+                <div class="blog-post__download-list">
+                    <article class="blog-post blog-post--full" itemprop="articleBody">
+
+                        {{ assets:blog_post_feature_image }}
+                        <div class="blog-post__feature-image-wrap popup-gallery">
+                            <a class="blog-post__feature-image-link" href="{{ glide:id height="1500" }}">
+                                <img class="blog-post__feature-image" src="{{ glide:id width="800" }}" alt="{{ alt }}" itemprop="image">
+                            </a>
+                        </div>
+                        {{ /assets:blog_post_feature_image }}
+
+                        {{ blog_post_content_blocks }}
+
+                        {{ if type=="blog_post_large_image" }}
+
+                        {{ assets:blog_post_large_image }}
+                        <div class="blog-post__large-image-wrap popup-gallery">
+                            <a class="blog-post__large-image-link" href="{{ glide:id height="1500" }}">
+                                <img class="blog-post__large-image" src="{{ glide:id width="800" }}" alt="{{ alt }}" itemprop="image">
+                            </a>
+                        </div>
+                        {{ /assets:blog_post_large_image }}
+
+                        {{ /if }}
+
+                        {{ if type=="blog_post_body" }}
+                        <div class="blog-post__body wysiwyg">
+                            {{ blog_post_body | markdown }}
+                        </div>
+                        {{ /if }}
+
+                        {{ if type=="blog_post_gallery" }}
+                        <div class="gallery gallery--blog popup-gallery">
+                            {{ blog_post_gallery_title | smartypants | wrapClasses:h2.gallery__title }}
+                            <ul class="gallery__list">
+                                {{ assets:blog_post_gallery_images }}
+                                <li class="gallery__item">
+                                    <a href="{{ glide:id height="1200" }}" class="gallery__link">
+                                        <div class="gallery__image-wrap">
+                                            <img src="{{ glide:id width="600" height="300" }}" alt="{{ alt or title }}" class="gallery__image" itemprop="photo">
+                                        </div>
+                                    </a>
+                                </li>
+                                {{ /assets:blog_post_gallery_images }}
+                            </ul>
+                        </div>
+                        {{ /if }}
+
+                        {{ if type=="blog_post_pdf_download_grid" }}
+                        <div class="blog-post__download-list">
+                            {{ pdf_download_grid }}
+                            <a class="blog-post__download" href="{{ url }}">
+                                <h4 class="blog-post__download-title">{{ blog_post_pdf_download_file_title }}</h4>
+                                {{ assets:blog_post_pdf_download_file }}
+                                <span class="btn btn-info blog-post__download-button">View PDF</span>
+                                {{ /assets:blog_post_pdf_download_file }}
+                            </a>
+                            {{ /pdf_download_grid }}
+                        </div>
+                        {{ /if }}
+
+                        {{ /blog_post_content_blocks }}
+
+                        <span class="blog-post__date" itemprop="dateCreated">Posted on: {{ date format="M j, Y" }}</span>
+
+                    </article>
+
+                    <a href="/blog" class="btn btn-primary blog-post__button">View More Posts</a>
+
+                </div>
+            </div>
+
+            <aside class="col-lg-4">
+                {{ partial:blog-aside }}
+            </aside>
+        </div>
+    </div>
+</div>

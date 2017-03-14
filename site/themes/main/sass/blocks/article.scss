@@ -1,0 +1,19 @@
+.article {
+
+    margin-bottom: calc(#{$spacer} + 4vh);
+
+    &__large-image-wrap {
+
+        margin-bottom: calc(#{$spacer} + 2vh);
+    }
+
+    &__large-image {
+
+
+    }
+
+    &__body {
+
+        margin-bottom: calc(#{$spacer} + 2vh);
+    }
+}

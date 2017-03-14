@@ -1,0 +1,30 @@
+.blog-post-list {
+
+    &__article {
+
+        margin-bottom: calc(#{$spacer} + 2vh);
+    }
+
+    &__title {
+    }
+
+    &__link {
+
+        display: block;
+        padding-bottom: $spacer;
+
+        border-bottom: 1px solid $gray-light;
+        text-decoration: none;
+
+        &:hover, &:focus {
+
+            outline: 0;
+            text-decoration: none;
+        }
+    }
+
+    &__date {
+
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,15 @@
+title: 'Collection: Employee'
+hide: true
+fields:
+  employee_position:
+    type: text
+    display: Position
+  employee_headshot:
+    type: assets
+    display: Photo
+    container: main
+    folder: img
+    max_files: 1
+  employee_bio:
+    type: textarea
+    display: Bio

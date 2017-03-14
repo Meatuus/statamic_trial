@@ -1,0 +1,66 @@
+/*
+|--------------------------------------------------------------------------
+| Base Typography
+|
+| These styles are used to set a base style for all elements. Only use
+| these properties here:
+|
+| color:
+| font-family:
+| font-size:
+| line-height:
+| margin:
+|
+|--------------------------------------------------------------------------
+*/
+
+h1 {
+
+    @include media-breakpoint-down(lg) {
+        font-size: calc(#{$font-size-h1}/2.75 + 4vw);
+    }
+}
+
+h2 {
+    @include media-breakpoint-down(lg) {
+        font-size: calc(#{$font-size-h2}/2 + 1.5vw);
+    }
+}
+
+h3 {
+    @include media-breakpoint-down(lg) {
+        font-size: calc(#{$font-size-h3}/2 + 1vw);
+    }
+}
+
+h4, h5, h6 {
+
+}
+
+p {
+
+}
+
+ul {
+
+}
+
+ol {
+
+}
+
+li {
+
+}
+
+b, strong {
+
+}
+
+i, em {
+
+}
+
+quote, blockquote {
+
+}

@@ -1,0 +1,35 @@
+title: 'Partial: Page Hero'
+hide: true
+fields:
+  main_banner:
+    type: section
+    display: Main Banner
+  page_hero_banner:
+    type: assets
+    display: Banner
+    container: main
+    folder: img/projects
+    max_files: "1"
+  page_hero_message:
+    type: text
+    instructions: Optional
+    display: Message
+  page_hero_intro:
+    type: markdown
+    display: Intro
+    instructions: Optional
+    cheatsheet: false
+  page_hero_call_to_action:
+    type: text
+    display: Call to Action
+    instructions: Optional
+    width: 50
+  page_hero_link:
+    type: pages
+    display: Call to Action Link
+    instructions: Optional
+    parent: db0ae4e3-4f10-4802-bc40-0b880cbf02c7
+    depth: "1"
+    max_items: "1"
+    mode: tags
+    width: 50
